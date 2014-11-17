@@ -1,0 +1,145 @@
+{
+	"roles":{
+		"desktop":{
+			"skills": {
+				"Windows 8": 5,
+				"Windows 7": 5,
+				"Windows Vista": 5,
+				"Windows XP": 5,
+				"Linux": 4,
+				"Desktops": 5,
+				"Laptops": 5,
+				"Printers": 3,
+				"IT Ticketing Systems": 4,
+				"MS Office": 5,
+				"SCCM": 3,
+				"Remote Support": 5,
+				"IT Asset Tracking": 5
+			},
+			
+		},
+		"server":{},
+		"web":{},
+		"pos":{}
+	},
+	"jobs": [
+		{
+			"name":"Edgemont Computer Geek",
+			"applies":["desktop","server","web"],
+			"from":1162364400,
+			"to":"now",
+			"role":"Server Administrator / Web Developer / Desktop Technician",
+			"high": [
+				"Designed, installed, and maintained multiple Windows Server 2003 machines",
+				"Implemented web sites",
+				"Frequently required looking over server logs, monitoring and optimizing system performance, and managing user accounts and permissions",
+				"Provided onsite and offsite professional technical support",
+				"Troubleshot SOHO networks, solving issues with a variety of systems including resource access, virus removal, printer, e-mail, network, and security setup"
+			]
+		},
+		{
+			"name":"Talisman Energy",
+			"applies":["desktop","server","web"],
+			"from":1306908000,
+			"to":1349071200,
+			"role":"Desktop Support Technician, Level IV",
+			"high": [
+				"Designed, implemented asset tracking system, which integrated automated queries to find lost equipment",
+				"Designed, implemented a web based network monitoring suite",
+				"Designed, implemented an online store to track equipment",
+				"Was the final escalation point in incident management, if nobody else could figure it out, it came to me",
+				"Performed networking tasks with a system of over 130 switches with 2000 users"
+			]
+		},
+		{
+			"name":"IBM, Superstore, Futureshop, Best Buy, Walmart, The Bay, RBC Royal Bank, and TD Bank – Through Kelly Services ",
+			"applies":["desktop","server","pos"],
+			"from":1265007600,
+			"to":1285912800,
+			"role":"POS Technician",
+			"high": [
+				"Installed, tested, repaired, and replaced a variety of POS hardware, Desktop Hardware and Software, and Server Hardware",
+				"The work of our team at TD Bank was the best in the country, most teams finished in 7 hours, while we usually finished in 2 hours with our optimizations, without cutting corners. IBM considered flying the team out to Toronto to do the main branch"
+			]
+		},
+		{
+			"name":"Shell Oil",
+			"applies":["desktop","server"],
+			"from":1235890800,
+			"to":1241157600,
+			"role":"Desktop Support Technician, Level III",
+			"high": [
+				"Programmed various utilities for working with large volumes of data, as well as performing inventory of networked hardware",
+				"Staged and installed varied client hardware",
+				"Performed repairs on a variety of HP hardware",
+				"Securely destroyed server data using SAN RAID arrays and DBAN"
+			]
+		},
+		{
+			"name":"General Dynamics Canada",
+			"applies":["desktop"],
+			"from":1228114800,
+			"to":1235890800,
+			"role":"Desktop Support Technician, Level III",
+			"high": [
+				"Supported Windows XP desktops in a Windows Server 2003 environment. Performed network and desktop troubleshooting, installation and maintenance.",
+				"Supported the latest in advanced hardware and software. Including Citrix Presentation Server, Entrust E-mail security, Office 2003/2007, Polycom (both software and hardware products), Norton Ghost, Adobe Acrobat 8, Encryption Plus Hard Drive encryption, and more.",
+				"Trusted to work in a very secure environment requiring card key access to most doors, file/disk/e-mail encryption, network segmentation and firewalling. Required PWGSC Reliability Clearance (expires in 2018) and Criminal Background check.",
+				"Wrote scripts to streamline installation of software. "
+			]
+		},
+		{
+			"name":"Calgary Board of Education",
+			"applies":["desktop"],
+			"from":1157090400,
+			"to":1201849200,
+			"role":"Desktop Technician, Level II",
+			"high": [
+				"Technician for workstations, printers, switches, and servers, troubleshooting issues with both Microsoft and Apple technology",
+				"Coded multiple programs to increase productivity.",
+				"Designed and wrote network-enabled program which reduced work time from 50 hours to 5 minutes",
+				"Programmed inventory program that compacted a week of work into a single click of a button"
+			]
+		},
+		{
+			"name":"SMART Technologies",
+			"applies":["desktop"],
+			"from":1217570400,
+			"to":1225519200,
+			"role":"Help Desk, Level II",
+			"high": [
+				"Troubleshot common and uncommon issues with proprietary hardware and software via telephone, e-mail, and Remote Desktop",
+				"Kept track of customers with Pivotal Customer Relationship Management System (CRM).",
+				"Dealt with angry, frustrated, and upset customers"
+			]
+		},
+		{
+			"name":"Calgary Stampede",
+			"applies":["pos"],
+			"from":1146463200,
+			"to":1157090400,
+			"role":"POS Technician",
+			"high": [
+				"Troubleshot all issues on 38 legacy POS units",
+				"Fixed errors in backend database code (MS Access)",
+				"Assisted in upgrade from legacy POS units to modern Ethernet based units",
+				"Troubleshot all issues on 38 modern POS units",
+				"Pulled reports, and maintained database backend"
+			]
+		},
+		{
+			"name":"Calgary Stampede",
+			"applies":["pos"],
+			"from":1177999200,
+			"to":1188626400,
+			"role":"POS Technician",
+			"high": [
+				"Troubleshot all issues on 38 legacy POS units",
+				"Fixed errors in backend database code (MS Access)",
+				"Assisted in upgrade from legacy POS units to modern Ethernet based units",
+				"Troubleshot all issues on 38 modern POS units",
+				"Pulled reports, and maintained database backend"
+			]
+		},
+	]
+}
