@@ -14,8 +14,16 @@
         var $f1, $f2, $f3, $f4, $fspot;
 		$(function() {
             $f1 = $("#f1"), $f2 = $("#f2"), $f3 = $("#f3"), $f4 = $("#f4"), $fspot = $("#fspot");
+            
+            $fspot.css({top: - $fspot.height(), left: -$fspot.width()});
+            var fbox = $fspot.box();
+            var wbox = $(flashlight).box();
+            $f1.box(Point.ORIGIN, fbox.topright);
+            $f2.box(fbox.right, wbox.top, wbox.right, fbox.bottom);
+            $f3.box(fbox.left, fbox.bottom, wbox.right, wbox.bottom);
+            $f4.box(wbox.left, fbox.top, fbox.left, wbox.bottom);
+            
             $("body").mousemove(function(e){
-                $fspot.html(new Point(e.pageX, e.pageY).toString());
                 $fspot.css({top: e.pageY - $fspot.height()/2, left: e.pageX - $fspot.width()/2});
                 var fbox = $fspot.box();
                 var wbox = $(flashlight).box();
