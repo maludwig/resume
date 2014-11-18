@@ -1,7 +1,4 @@
-/*jshint -W117 */
-/*jshint -W098 */
-
-//Requires color.js, hook.js, and excanvas.js
+/* global document, Hook, jQuery */
 var mDown = false;
 
 (function($){

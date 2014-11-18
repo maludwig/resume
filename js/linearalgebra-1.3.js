@@ -3,6 +3,9 @@ function Point(x,y) {
 	if(x instanceof Point) {
 		this.x = x.x;
 		this.y = x.y;
+    } else if (typeof x.top === "number" && typeof x.left === "number") {
+        this.x = x.left;
+        this.y = x.top;
 	} else {
 		this.x = x;
 		this.y = y;		
@@ -14,6 +17,9 @@ Point.prototype.midpoint = function(p) {
 };
 Point.prototype.add = function(v) {
 	return new Point(this.x + v.dx, this.y + v.dy);
+};
+Point.prototype.subtract = function(v) {
+	return new Point(this.x - v.dx, this.y - v.dy);
 };
 Point.prototype.in = function(box) {
     return this.x >= box.left &&

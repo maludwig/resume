@@ -1,4 +1,4 @@
-/* Depends on linearalgebra v1.3 */
+/* Depends on jquery and linearalgebra v1.3 */
 
 /*global jQuery*/
 /*global Box*/
