@@ -17,8 +17,12 @@
             $f1 = $("#f1"), $f2 = $("#f2"), $f3 = $("#f3"), $f4 = $("#f4"), $fspot = $("#fspot");
             $("body").mousemove(function(e){
                 $fspot.css({top: e.pageY - flash.h2, left: e.pageX - flash.w2});
-                var pts = $fspot.box();
-                $f1.box(Point.ORIGIN, pts.topright);
+                var fbox = $fspot.box();
+                var wbox = $(flashlight).box();
+                $f1.box(Point.ORIGIN, fbox.topright);
+                $f2.box(fbox.right, wbox.top, wbox.right, fbox.bottom);
+                $f3.box(fbox.left, fbox.bottom, wbox.right, wbox.bottom);
+                $f4.box(wbox.left, fbox.top, fbox.left, wbox.bottom);
             });
 		});
         $(window).load(function(){

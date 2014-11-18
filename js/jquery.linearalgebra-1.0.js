@@ -5,7 +5,7 @@
 
 (function ($) {
     $.fn.box = function (x1,y1,x2,y2) {
-        if (x1) {
+        if (typeof x1 !== "undefined") {
             var b = new Box(x1, y1, x2, y2);
             this.css({left: b.left, top: b.top, width: b.width, height: b.height});
             return this;

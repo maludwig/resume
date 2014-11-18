@@ -1,7 +1,3 @@
-/*jshint -W117 */
-/*jshint -W098 */
-
-var verbose = false;
 
 function Point(x,y) {
 	if(x instanceof Point) {
@@ -11,8 +7,6 @@ function Point(x,y) {
 		this.x = x;
 		this.y = y;		
 	}
-	if(verbose) {if(typeof draw !== 'undefined'){draw(this);}}
-	//if(typeof draw !== 'undefined'){draw(this);}
 }
 Point.ORIGIN = new Point(0,0);
 Point.prototype.midpoint = function(p) {
@@ -20,6 +14,12 @@ Point.prototype.midpoint = function(p) {
 };
 Point.prototype.add = function(v) {
 	return new Point(this.x + v.dx, this.y + v.dy);
+};
+Point.prototype.in = function(box) {
+    return this.x >= box.left &&
+        this.x < box.right &&
+        this.y >= box.top &&
+        this.y < box.bottom;
 };
 Point.prototype.toString = function() {
 	return "[" + this.x + ", " + this.y + "]";
@@ -60,7 +60,7 @@ Point.bounds = function(points) {
 		"width":maxx-minx,
 		"height":maxy-miny
 	};
-}
+};
 
 function Box(x1,y1,x2,y2) {
     var p1, p2, swap;
@@ -120,7 +120,6 @@ function Vector(o,t) {
 	}
 	this.dx = this.t.x - this.o.x;
 	this.dy = this.t.y - this.o.y;
-	if(verbose) {if(typeof draw !== 'undefined'){draw(this);}}
 }
 Vector.prototype.add = function(v) {
 	return new Vector(this.dx + v.dx, this.dy + v.dy);
@@ -204,7 +203,6 @@ function Line(o,dx,dy) {
 	}
 	this.t = new Point(this.o.x + this.dx,this.o.y + this.dy);
 	this.v = new Vector(this.o,this.t);	
-	if(verbose) {if(typeof draw !== 'undefined'){draw(this);}}
 }
 Line.prototype.reflect = function(p) {
 	if(p instanceof Point) {
