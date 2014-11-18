@@ -11,12 +11,12 @@
 	<script src="js/linearalgebra-1.3.js"></script>
 	<script src="js/jquery.linearalgebra-1.0.js"></script>
 	<script type="text/javascript">
-        flash = {};
         var $f1, $f2, $f3, $f4, $fspot;
 		$(function() {
             $f1 = $("#f1"), $f2 = $("#f2"), $f3 = $("#f3"), $f4 = $("#f4"), $fspot = $("#fspot");
             $("body").mousemove(function(e){
-                $fspot.css({top: e.pageY - flash.h2, left: e.pageX - flash.w2});
+                $fspot.html(new Point(e.pageX, e.pageY).toString());
+                $fspot.css({top: e.pageY - $fspot.height()/2, left: e.pageX - $fspot.width()/2});
                 var fbox = $fspot.box();
                 var wbox = $(flashlight).box();
                 $f1.box(Point.ORIGIN, fbox.topright);
@@ -25,10 +25,6 @@
                 $f4.box(wbox.left, fbox.top, fbox.left, wbox.bottom);
             });
 		});
-        $(window).load(function(){
-            flash.w2 = $fspot.width()/2;
-            flash.h2 = $fspot.height()/2;
-        });
 	</script>
 </head>
 
