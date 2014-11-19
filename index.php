@@ -12,10 +12,10 @@
 	<script src="js/linearalgebra-1.3.js"></script>
 	<script src="js/jquery-linearalgebra-1.0.js"></script>
 	<script src="js/jquery-center.1.2.js"></script>
+	<script src="js/color.1.1.js"></script>
 	<script src="js/jquery-flashlight-1.0.js"></script>
 	<script type="text/javascript">
         $(function(){
-            $("#flashlight div").addClass("dying");
         });
 	</script>
 </head>

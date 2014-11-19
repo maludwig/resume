@@ -1,16 +1,3 @@
-@f-stop1:hsla(0, 0%, 100%, 0);
-@f-stop2:hsla(48, 15%, 46%, 0.5);
-@f-stop3:hsla(44, 18%, 30%, 0.65);
-@f-stop4:hsla(48, 17%, 35%, 0.6);
-@f-stop5:hsla(51, 25%, 17%, 0.8);
-@f-stop6:hsla(44, 44%, 5%, 0.95);
-.flashlight-glow(@darkenby) {
-    background: radial-gradient(darken(fadein(@f-stop1,@darkenby),@darkenby) 10%, darken(fadein(@f-stop2,@darkenby),@darkenby) 25%, darken(fadein(@f-stop3,@darkenby),@darkenby) 40%, darken(fadein(@f-stop4,@darkenby),@darkenby) 60%, darken(fadein(@f-stop5,@darkenby),@darkenby) 65%, darken(fadein(@f-stop6,@darkenby),@darkenby) 70%);
-}
-.darkness(@darkenby) {
-    background: darken(fadein(@f-stop6,@darkenby),@darkenby);
-}
-
 html, body {
 	margin: 0;
 	padding: 0;
@@ -37,33 +24,9 @@ div {
     }
     div {
         position:absolute;
-        &.dead {
-            .darkness(100%);
-        }
-        &.dying {
-            .darkness(80%);
-        }
-        &.dim {
-            .darkness(30%);
-        }
-        &.bright {
-            .darkness(0%);
-        }
     }
     #fspot {
-        width:100px;
-        height:100px;
-        &.dead {
-            .flashlight-glow(100%);
-        }
-        &.dying {
-            .flashlight-glow(80%);
-        }
-        &.dim {
-            .flashlight-glow(30%);
-        }
-        &.bright {
-            .flashlight-glow(0%);
-        }
+        width:400px;
+        height:400px;
     }
 }
