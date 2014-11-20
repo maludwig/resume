@@ -1,5 +1,5 @@
-/* Depends on jquery, jquery-linearalgebra v1.0, Color v1.1, and linearalgebra v1.3 */
-/* global jQuery, Point, setInterval, Color */
+/* Depends on jQuery, Color v1.1 */
+/* global jQuery, setInterval, Color, window */
 
 (function ($) {
     var $f1, $f2, $f3, $f4, $fspot, $flash, $fdiv, $fh2, shaking = 0, lastx = 0, lasty = 0;
@@ -11,74 +11,65 @@
     var fstop6 = new Color("hsla(44, 44%, 5%, 0.95)");
     var currlevel = 0;
     $(function() {
-        $f1 = $("#f1"); $f2 = $("#f2"); $f3 = $("#f3"); $f4 = $("#f4"); $fspot = $("#fspot"); $flash = $("#flashlight"); $fdiv = $("#flashlight div:not(#fspot)"); $fh2 = $("#flashlight h2");
-        positionLight(-8000,-8000);
-        $("#flashlight h2").center();
+        $flash = $("#flashlight"); $fh2 = $("#flashlight h2");
         
         $("body").mousemove(function(e){
-            positionLight(e.pageX, e.pageY);
             if(lastx !== 0 && lasty !== 0) {
-                shaking += Math.abs(lastx-e.pageX) + Math.abs(lasty-e.pageY);
-                setGlowy();
+                shaking += (Math.abs(lastx-e.pageX) + Math.abs(lasty-e.pageY))/2;
+                setGlowy(e.pageX,e.pageY-$flash.offset().top);
             }
             lastx = e.pageX;
             lasty = e.pageY;
+        });
+        $("body").touchMove(function(x,y){
+            if(lastx !== 0 && lasty !== 0) {
+                shaking += (Math.abs(lastx-x) + Math.abs(lasty-y));
+                setGlowy(x,y-$flash.offset().top);
+            }
+            lastx = x;
+            lasty = y;
         });
         setInterval(function() {
             shaking -= 100;
             setGlowy();
         }, 100);
+        $fh2.hide();
+        $($fh2[0]).fadeIn(800).delay(3000).fadeOut();
+        $($fh2[1]).delay(5000).fadeIn().delay(3000).fadeOut();
+        $($fh2[2]).delay(10000).fadeIn();
     });
     
-    function setGlowy() {
+    function setGlowy(x,y) {
+        x = typeof x === "undefined" ? lastx : x;
+        y = typeof y === "undefined" ? lasty : y;
         if(shaking < 0) {
             shaking = 0;
-            $fdiv.css("background","#000000");
-            $fspot.css("background","#000000");
+            $flash.css("background","#000000");
         } else if (shaking < 15000) {
             var power = shaking / 15000;
             var darkenby = 100 - power*100;
             var fadeinby = 1 - power;
-            $fspot.css("background","radial-gradient(" + 
+            $flash.css("background","radial-gradient(200px at " + 
+                x + "px " + y + "px," +
                 fstop1.darken(darkenby).fadein(fadeinby * 0.5) + " 10%, " +
                 fstop2.darken(darkenby).fadein(fadeinby * 0.5) + " 25%, " +
                 fstop3.darken(darkenby).fadein(fadeinby * 0.5) + " 40%, " +
                 fstop4.darken(darkenby).fadein(fadeinby * 0.5) + " 60%, " +
                 fstop5.darken(darkenby).fadein(fadeinby * 0.5) + " 65%, " +
                 fstop6.darken(darkenby).fadein(fadeinby * 0.05) + " 70%)");
-            $fdiv.css("background",fstop6.darken(darkenby).fadein(fadeinby * 0.05));
         } else {
-            if (shaking > 25000) { shaking = 25000; }
-            $fspot.css("background","radial-gradient(" + 
+            if (shaking > 16000) { shaking = 16000; }
+            $flash.css("background","radial-gradient(200px at " + 
+                x + "px " + y + "px," +
                 fstop1 + " 10%, " +
                 fstop2 + " 25%, " +
                 fstop3 + " 40%, " +
                 fstop4 + " 60%, " +
                 fstop5 + " 65%, " +
                 fstop6 + " 70%)");
-            $fdiv.css("background",fstop6);
         }
-        $fh2.html(shaking);
-    }
-    
-    function getGradient(power) {
-    }
-        
-        
-    
-    function adjustLight(color) {
-    }
-    
-    function positionLight(x,y) {
-        var fpt = new Point($flash.offset());
-        var pt = new Point(x,y);
-        
-        $fspot.css({top: pt.y - $fspot.height()/2, left: pt.x - $fspot.width()/2});
-        var fbox = $fspot.box();
-        var wbox = $flash.box();
-        $f1.box(Point.ORIGIN, fbox.topright);
-        $f2.box(fbox.right, wbox.top, wbox.right, fbox.bottom);
-        $f3.box(fbox.left, fbox.bottom, wbox.right, wbox.bottom);
-        $f4.box(wbox.left, fbox.top, fbox.left, wbox.bottom);
+        if (shaking > 7000) {
+            $fh2.fadeOut();
+        }
     }
 }(jQuery));

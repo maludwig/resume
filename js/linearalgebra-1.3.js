@@ -1,4 +1,13 @@
+/**
+ * Linear Algebra package.
+ * 
+ * All work is done in radians unless otherwise specified.
+ * 
+ * Available objects include Point, Box, Vector, Line, Matrix, Triangle
+ */
 
+//Specifies a point in cartesian coordinates.
+//Accepts a Point, an object with left and top properties (as from jQuery offset() and position()), or a numeric x and y coordinate
 function Point(x,y) {
 	if(x instanceof Point) {
 		this.x = x.x;
@@ -11,16 +20,21 @@ function Point(x,y) {
 		this.y = y;		
 	}
 }
+//The point at (0,0)
 Point.ORIGIN = new Point(0,0);
+//Returns a new Point representing the midpoint between the current Point and the input Point
 Point.prototype.midpoint = function(p) {
 	return new Point((this.x + p.x)/2,(this.y + p.y)/2);
 };
+//Adds a Vector to the current Point, and returns the result as a new Point
 Point.prototype.add = function(v) {
 	return new Point(this.x + v.dx, this.y + v.dy);
 };
+//Subtracts a Vector from the current Point, and returns the result as a new Point
 Point.prototype.subtract = function(v) {
 	return new Point(this.x - v.dx, this.y - v.dy);
 };
+//Returns true if the current Point is in the input Box, false otherwise
 Point.prototype.in = function(box) {
     return this.x >= box.left &&
         this.x < box.right &&
@@ -30,6 +44,7 @@ Point.prototype.in = function(box) {
 Point.prototype.toString = function() {
 	return "[" + this.x + ", " + this.y + "]";
 };
+//Serializes the a point or set of points into an array of numeric coordinates
 Point.serialize = function(pt) {
 	if(pt instanceof Point) {
 		return [pt.x,pt.y];
@@ -42,6 +57,7 @@ Point.serialize = function(pt) {
 		return ret;
 	}
 };
+//Returns an array of Points from an array of numeric coordinates
 Point.deserialize = function(data) {
 	var ret = [];
 	for(var i=0;i<data.length;i+=2) {
@@ -49,7 +65,8 @@ Point.deserialize = function(data) {
 	}
 	return ret;
 };
-Point.bounds = function(points) {
+//Returns the smallest Box that could contain all of the Points
+Point.boundingbox = function(points) {
 	var pts = arguments.length == 1 ? points : arguments;
 	var minx=pts[0].x,miny=pts[0].y,maxx=pts[0].x,maxy=pts[0].y;
 	for(var i=1;i<pts.length;i++) {
@@ -58,16 +75,14 @@ Point.bounds = function(points) {
 		maxx = Math.max(pts[i].x,maxx);
 		maxy = Math.max(pts[i].y,maxy);
 	}
-	return {
-		"minx":minx,
-		"miny":miny,
-		"maxx":maxx,
-		"maxy":maxy,
-		"width":maxx-minx,
-		"height":maxy-miny
-	};
+    return new Box(minx,miny,maxx,maxy);
 };
 
+//Represents a rectangle
+//If the input parameter is a Box, returns a duplicate of the Box
+//If the input parameter is two Points, returns the smallest Box that could contain both Points
+//If the input is four numbers, they are treated as the cartesian coordinates of two Points, returns the smallest Box that could contain both Points
+//Mostly for convenience, this calculates each corner Point, the width, the height, and the top, bottom, left, and right coordinates.
 function Box(x1,y1,x2,y2) {
     var p1, p2, swap;
     if(x1 instanceof Box) {
@@ -109,6 +124,11 @@ Box.prototype.toString = function() {
 	return "{left:" + this.left + ", top:" + this.top + ", right:" + this.right + ", bottom:" + this.bottom + "}";
 };
 
+//Represents a Vector
+//If the input parameter is a Vector, returns a duplicate of the Vector
+//If the input is a single Point, returns the Vector pointing from the Origin (0,0) to the input point
+//If the input is two Points, returns the Vector pointing from the first input to the second
+//If the input is two numbers, treats those numbers as coordinates of a Point, and returns the Vector pointing from the Origin to that Point
 function Vector(o,t) {
 	if(o instanceof Vector) {
 		this.o = new Point(o.o);
@@ -127,21 +147,28 @@ function Vector(o,t) {
 	this.dx = this.t.x - this.o.x;
 	this.dy = this.t.y - this.o.y;
 }
+//Adds the input Vector to the current Vector, returns the result as a new Vector
 Vector.prototype.add = function(v) {
 	return new Vector(this.dx + v.dx, this.dy + v.dy);
 };
+//Subtracts the input Vector from the current Vector, returns the result as a new Vector
 Vector.prototype.sub = function(v) {
 	return new Vector(this.dx - v.dx, this.dy - v.dy);
 };
+//Multiplies the Vector magnitude by the input number, without changing the angle
 Vector.prototype.mul = function(m) {
 	return new Vector(this.dx * m, this.dy * m);
 };
+//Divides the Vector magnitude by the input number, without changing the angle
 Vector.prototype.div = function(d) {
 	return new Vector(this.dx / d, this.dy / d);
 };
+//Returns the dot product of the current Vector with the input Vector
 Vector.prototype.dot = function(v) {
 	return (this.dx * v.dx) + (this.dy * v.dy);
 };
+//If no input is provided, returns the magnitude of the Vector
+//If a numeric input is provided, sets the magnitude of the current Vector without changing the angle
 Vector.prototype.mag = function(m) {
 	var curmag = Math.sqrt((this.dx * this.dx) + (this.dy * this.dy));
 	if(typeof m !== 'undefined') {
@@ -152,19 +179,23 @@ Vector.prototype.mag = function(m) {
 		return curmag;
 	}
 };
+//Returns the square of the current Vector's magnitude, used as a faster calculation
 Vector.prototype.magsq = function() {
 	return (this.dx * this.dx) + (this.dy * this.dy);
 };
+//Rotates the current Vector's angle by the input, in radians, without changing the magnitude
 Vector.prototype.rotate = function(rad) {
 	rad += Math.PI;
 	var angle = this.angle();
-	var newx = this.o.x-this.mag()*Math.cos(angle-rad);
-	var newy = this.o.y-this.mag()*Math.sin(angle-rad);
+	var newx = this.o.x - this.mag()*Math.cos(angle-rad);
+	var newy = this.o.y - this.mag()*Math.sin(angle-rad);
 	return new Vector(new Point(this.o), new Point(newx,newy));
 };
+//Returns the current Vector's angle
 Vector.prototype.angle = function() {
 	return Math.atan2(this.dy,this.dx);
 };
+//Returns the difference between the current Vector's angle and the input Vector's angle
 Vector.prototype.angleFrom = function(v) {
 	var a = this.angle() - v.angle();
 	if(a > Math.PI) {
@@ -175,6 +206,7 @@ Vector.prototype.angleFrom = function(v) {
 	}
 	return a;
 };
+//Calculates the Point that would result from the addition of the current Vector to the Origin
 Vector.prototype.terminus = function() {
 	return new Point(this.dx,this.dy);
 };
@@ -185,6 +217,11 @@ Vector.prototype.toString = function() {
 	return "[" + this.dx + ", " + this.dy + "]";
 };
 
+//Represents a straight line with no fixed beginning or end
+//If the input is a Line, creates a new duplicate of the Line
+//If the first input is a Point, and the second input is a Vector, returns the Line that intersects the Point with the same angle as the Vector
+//If the first input is a Point, and the second input is a Point, returns the Line intersecting both Points
+//If the first input is a Point, and the second and third inputs are numeric, returns the Line intersecting the Point, with a slope specified by the numeric inputs
 function Line(o,dx,dy) {
 	if(o instanceof Line) {
 		this.o = new Point(o.o);
@@ -210,6 +247,8 @@ function Line(o,dx,dy) {
 	this.t = new Point(this.o.x + this.dx,this.o.y + this.dy);
 	this.v = new Vector(this.o,this.t);	
 }
+//If the input is a Point, calculates the reflection of the Point across the Line, and returns the result as a new Point
+//If the input is a Vector, calculates the reflection of the Vector across the Line, and returns the result as a new Vector
 Line.prototype.reflect = function(p) {
 	if(p instanceof Point) {
 		var vop = new Vector(this.o,p);
@@ -224,12 +263,16 @@ Line.prototype.reflect = function(p) {
 		return new Vector(p1,p2);
 	}
 };
+//Rotate the line about the Origin point
 Line.prototype.rotate = function(rad) {
 	return new Line(new Point(this.o), this.v.rotate(rad));
 };
+//Return the angle of the Line
 Line.prototype.angle = function() {
 	return Math.atan2(this.dy,this.dx);
 };
+//If the current Line and the input Line intersect, calculate their intersection and return the Point
+//Throws an error of the Lines do not intersect
 Line.prototype.intersect = function(ln) {
 	if(this.dx === 0) {
 		if(ln.dx === 0) {
@@ -257,6 +300,7 @@ Line.prototype.toString = function() {
 	return "o" + this.o + "->[" + this.dx + ", " + this.dy + "]";
 };
 
+//Accepts either an existing Matrix or an array of arrays of numbers as input
 function Matrix(o) {
 	if(o instanceof Matrix) {
 		this.data = o.data;
@@ -266,9 +310,11 @@ function Matrix(o) {
 	this.h = this.data.length;
 	this.w = this.data[0].length;
 }
+//Returns a single row from the Matrix
 Matrix.prototype.row = function(k) {
 	return this.data[k];
 };
+//Returns a single column from the Matrix
 Matrix.prototype.col = function(k) {
 	var ret = [];
 	for(var y=0;y<this.data.length;y++){
@@ -276,6 +322,7 @@ Matrix.prototype.col = function(k) {
 	}
 	return ret;
 };
+//Multiplies the current matrix by the input, returns a new Matrix
 Matrix.prototype.mul = function(m) {
 	var newdata = [],x,y;
 	if(m instanceof Matrix) {
@@ -315,18 +362,23 @@ Matrix.prototype.toString = function() {
 	return s;
 };
 
+//Accepts 3 Points, a, b, and c, that define the Triangle.
 function Triangle(a,b,c) {
+    //Precalculate the distance (vertical and horizontal) between each point.
 	var abx = a.x - b.x, acx = a.x - c.x, bcx = b.x - c.x;
 	var aby = a.y - b.y, acy = a.y - c.y, bcy = b.y - c.y;
 	this.a = a;
 	this.b = b;
 	this.c = c;
+    //Calculate the length of each side. lena is the length of the side opposite to Point a
 	this.lena = Math.sqrt((bcx * bcx) + (bcy * bcy));
 	this.lenb = Math.sqrt((acx * acx) + (acy * acy));
 	this.lenc = Math.sqrt((abx * abx) + (aby * aby));
+    //Calculate the angle, in radians, of each point
 	this.rada = Math.acos(((this.lenb * this.lenb) + (this.lenc * this.lenc) - (this.lena * this.lena))/(2 * this.lenb * this.lenc));
 	this.radb = Math.acos(((this.lena * this.lena) + (this.lenc * this.lenc) - (this.lenb * this.lenb))/(2 * this.lena * this.lenc));
 	this.radc = (Math.PI) - (this.rada + this.radb);
+    //Calculate the angle, in degrees, of each point
 	this.dega = this.rada * (180 / Math.PI);
 	this.degb = this.radb * (180 / Math.PI);
 	this.degc = this.radc * (180 / Math.PI);
