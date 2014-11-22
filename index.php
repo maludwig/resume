@@ -24,20 +24,46 @@
     <!-- Anyways, the flashlight serves as a way of showcasing my Javascript and CSS3 abilities -->
     <script src="js/jquery-flashlight-1.0.js"></script>
     <!-- The flashlight also loads quite quickly, and serves to hide the loading of heavier content. Only ~300kb of has been loaded at this point. -->
+    <script src="lib/codemirror.js"></script>
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <link rel="stylesheet" href="theme/ambiance.css">
+    <script src="mode/htmlmixed/htmlmixed.js"></script>
+    <script src="mode/xml/xml.js"></script>
+    <script src="mode/javascript/javascript.js"></script>
+    <script src="mode/css/css.js"></script>
+	<script src="js/jquery-slowtype-1.0.js"></script>
 	
     <script type="text/javascript">
+        $(window).load(function(){
+            $("#dial").center();
+            $("#lightswitch").center();
+        });
 	</script>
 </head>
 
 <body>
+    <div id="content">
+        
+    </div>
+    
+    <div id="dial">
+        <div id="admin">
+            <pre></pre>
+        </div>
+        <div id="human">:D</div>
+        <div id="developer">
+            <textarea id="code" name="code">
+            </textarea>
+        </div>
+        <div id="examples">EXAMP</div>
+        <h1 id="lightswitch">ON</h1>
+    </div>
     <div id="flashlight">
         <h2>Looking for a web developer?</h2>
         <h2>It's too dark in here to find one.</h2>
         <h2>Shake your flashlight to charge it.</h2>
     </div>
-    <div id="content">
-        
-    </div>
+    
 </body>
 </html>
 

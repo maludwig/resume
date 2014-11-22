@@ -27,7 +27,7 @@
              * Retreives the Box for the first matched element. 
              * Mostly for convenience, this calculates each corner Point, the width, the height, and the top, bottom, left, and right coordinates.
             */
-            var p = this.position(), w = this.width(), h = this.height();
+            var p = this.offset(), w = this.width(), h = this.height();
             return new Box(p.left, p.top, p.left + w, p.top + h);
         }
     };

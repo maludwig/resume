@@ -1,5 +1,5 @@
-/* Depends on jQuery, Color v1.1 */
-/* global jQuery, setInterval, Color, window */
+/* Depends on jQuery, Color v1.1, linearalgebra v1.3 */
+/* global jQuery, setInterval, Color, window, Point, Box */
 
 (function ($) {
     var $f1, $f2, $f3, $f4, $fspot, $flash, $fdiv, $fh2, shaking = 0, lastx = 0, lasty = 0;
@@ -28,6 +28,13 @@
             }
             lastx = x;
             lasty = y;
+        });
+        $("body").touchStart(function(x,y) {
+            var p = new Point(x,y);
+            var bls = $("#lightswitch").box();
+            if(p.in(bls)) {
+                $("#flashlight").fadeOut(200);
+            }
         });
         setInterval(function() {
             shaking -= 100;
