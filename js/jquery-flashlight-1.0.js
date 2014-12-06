@@ -32,7 +32,7 @@
         $("body").touchStart(function(x,y) {
             var p = new Point(x,y);
             var bls = $("#lightswitch").box();
-            if(p.in(bls)) {
+            if(p.inside(bls)) {
                 $("#flashlight").fadeOut(200);
             }
         });

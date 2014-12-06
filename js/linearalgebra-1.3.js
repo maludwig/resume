@@ -35,7 +35,7 @@ Point.prototype.subtract = function(v) {
 	return new Point(this.x - v.dx, this.y - v.dy);
 };
 //Returns true if the current Point is in the input Box, false otherwise
-Point.prototype.in = function(box) {
+Point.prototype.inside = function(box) {
     return this.x >= box.left &&
         this.x < box.right &&
         this.y >= box.top &&
