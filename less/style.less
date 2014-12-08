@@ -1,114 +1,43 @@
-@dialsize: 400px;
-@lightswitchsize: @dialsize/3;
-@lightswitchcolor: #BD2525;
-
 html, body {
 	margin: 0;
 	padding: 0;
     width: 100%;
     height: 100%;
     font-family: 'Open Sans', sans-serif;
-    overflow:hidden;
-    background: linear-gradient(#646c6f,#bec6c8 10%,#f3fcfb 28%, #acb6b7 47%, #929c9e 55%, #a2a2a2 65%, #9c9c9c 75%, #76757a 90%);
-}
-
-a img {
-	border: none;
+    background:black;
 }
 
 div {
-    //outline: 1px solid red;
+    outline:1px solid red;
 }
 
-h1 {
-    font-size: 2.2em;
-    font-weight: 700;
-    letter-spacing: -1px;
-}
-
-#dial {
-    background: #d7e0db;
-    width: @dialsize;
-    height: @dialsize;
-    border: 2px solid black;
-    //border-radius: @dialsize;
-    #lightswitch {
-        margin:0;
-        padding:0;
-        color: #f1f1f1;
-        font-size: 48px;
-        background: @lightswitchcolor;
-        width: @lightswitchsize;
-        height: @lightswitchsize;
-        border: 2px solid black;
-        border-radius: @lightswitchsize;
-        text-align: center;
-        line-height: @lightswitchsize;
-        &:hover {
-            background:lighten(@lightswitchcolor,10%);
-        }
-        z-index: 10;
-    }
-    >div {
-        position:absolute;
-        width:50%;
-        height:50%;
-        overflow: hidden;
-        //line-height: @dialsize/2;
-    }
-    #admin {
-        top:0;
-        left:0;
-        background: black;
-        color: #0f0;
-        pre {
-            margin:0.3em 1em;
+@media screen and (min-width: 800px) {
+    #header {
+        position: relative;
+        width: 800px;
+        margin: 0 auto;
+        #btn-power {
             position:absolute;
-            bottom:0;
+            top:100px;
+            left:0px;
+            width:100px;
+            height:100px;
+            background: url('../img/btnpower-sprite.png') 0 0;
+            &:hover {
+                background: url('../img/btnpower-sprite.png') 0 -200px;
+            }
+            &:active {
+                background: url('../img/btnpower-sprite.png') 0 -100px;
+            }
         }
-    }
-    #human {
-        top:0;
-        right:0;
-        line-height: @dialsize/2;
-        text-align: center;
-        
-        -webkit-transition-duration: 0.8s;
-        -moz-transition-duration: 0.8s;
-        -o-transition-duration: 0.8s;
-        transition-duration: 0.8s;
-
-        -webkit-transition-property: -webkit-transform;
-        -moz-transition-property: -moz-transform;
-        -o-transition-property: -o-transform;
-        transition-property: transform;
-
-        overflow:hidden;
-        &:hover {
-            -webkit-transform:rotate(90deg);
-            -moz-transform:rotate(90deg);
-            -o-transform:rotate(90deg);
-            transform:rotate(90deg);
+        #neon {
+            width:400px;
+            height:300px;
+            margin: 0 auto;
+            background: url('../img/neon-sprite.png') 0 0;
+            &.off {
+                background: url('../img/neon-sprite.png') 0 -300px;
+            }
         }
-    }
-    #developer {
-        bottom:0;
-        left:0;
-    }
-    #examples {
-        bottom:0;
-        right:0;
-    }
-}
-
-#flashlight {
-    position:fixed;
-    width:100%;
-    height:100%;
-    background: black;
-    z-index: 20;
-    h2 {
-        color:rgba(135,128,100,0.5);
-        text-align: center;
     }
 }
