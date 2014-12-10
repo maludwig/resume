@@ -22,43 +22,31 @@
             $($fh2[0]).fadeIn(500).delay(2500).fadeOut(400);
             $($fh2[1]).delay(3500).fadeIn(500).delay(2500).fadeOut(400);
             $($fh2[2]).delay(7000).fadeIn(500);
-            $("#toodark").delay(9000).fadeOut(400);
+            $("#toodark").delay(9).fadeOut(400);
         });
         $(function(){
             $("#btn-power").click(function(){
                 //$("#neon").toggleClass("off").delay(200).toggleClass("off").delay(200).toggleClass("off").delay(400);
                 $(this).fadeOut();
-                $("#neon").toggleClass("off");
-                setTimeout(function() { $("#neon").toggleClass("off"); },100);
-                setTimeout(function() { $("#neon").toggleClass("off"); },200);
-                setTimeout(function() { $("#neon").toggleClass("off"); },240);
-                setTimeout(function() { $("#neon").toggleClass("off"); },280);
-                setTimeout(function() { $("#neon").toggleClass("off"); },500);
-                setTimeout(function() { $("#neon").toggleClass("off"); },800);
-                $("#content").delay(1700).slideDown();
-                expand($(".section .scontent:first").delay(2300));
-            });
-            $(".section:even>h2").append(' &nbsp;&nbsp;<i class="fa fa-caret-right"></i>');
-            $(".section:odd>h2").prepend('<i class="fa fa-caret-left"></i> &nbsp;&nbsp;');
-            $(".section>h2").click(function() {
-                $(this).parent().find(".scontent").slideDown();
+                $("#header").toggleClass("off");
+                setTimeout(function() { $("#header").toggleClass("off"); },100);
+                setTimeout(function() { $("#header").toggleClass("off"); },200);
+                setTimeout(function() { $("#header").toggleClass("off"); },240);
+                setTimeout(function() { $("#header").toggleClass("off"); },250);
+                setTimeout(function() { $("#header").toggleClass("off"); },265);
+                setTimeout(function() { $("#header").toggleClass("off"); },280);
+                setTimeout(function() { $("#header").toggleClass("off"); },500);
+                setTimeout(function() { $("#header").toggleClass("off"); },800);
+                $("#shroud").delay(17).fadeOut();
             });
         });
-        function expand(sect) {
-            var $sc;
-            if($(sect).hasClass("scontent")) $sc = $(sect);
-            if($(sect).hasClass("section")) $sc = $(sect).find(".scontent");
-            if($(sect).prop("tagName") == ("h2")) $sc = $(sect).parent().find(".scontent");
-            $sc.slideDown();
-            $sc.parent().find("h2 .fa").addClass("rotate");
-        }
 	</script>
 </head>
 
 <body>
-    <div id="header">
+    <div id="header" class="off">
         <div id="btn-power"></div>
-        <div id="neon" class="off"></div>
+        <div id="neon"></div>
     </div>
     <div id="content">
         <div class="section">
@@ -137,6 +125,7 @@
 
             </div>
         </div>
+        <div id="shroud"></div>
     </div>
     <div id="toodark">
         <h2>Looking for a web developer?</h2>
