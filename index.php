@@ -23,6 +23,9 @@
             $($fh2[1]).delay(3500).fadeIn(500).delay(2500).fadeOut(400);
             $($fh2[2]).delay(7000).fadeIn(500);
             $("#toodark").delay(9000).fadeOut(400);
+            setTimeout(function(){
+                window.scrollTo(0,0);
+            },9000);
         });
         $(function(){
             $("#btn-power").click(function(){
@@ -39,6 +42,7 @@
                 setTimeout(function() { $("#header").toggleClass("off"); },800);
                 $("#shroud").delay(1700).fadeOut(2000);
             });
+            window.scrollTo(0,0);
         });
 	</script>
 </head>
@@ -51,9 +55,9 @@
     </div>
     <div id="content">
         <div class="section">
-            <h2>Tecsh Demo</h2>
+            <h2>Tech Demo</h2>
             <div class="scontent">
-                The <a href="http://edgemontgeek.com/whiteboard/">Whiteboard App</a> is a web app I designed and implemented to showcase my web development skills. It allows for people to share a whiteboard in the cloud, and visually communicate ideas over any distance.
+                The <a href="http://edgemontgeek.com/whiteboard/">Whiteboard App</a> is a web app I designed and implemented to showcase my web development skills. It allows for people to share a whiteboard in the cloud, and visually communicate ideas over any distance. Built on LAMP (Linux [CentOS], Apache, MySQL, PHP) in the Amazon EC2 cloud.
             </div>
         </div>
         <div class="section">
@@ -61,7 +65,7 @@
             <div class="scontent">
                 <p><a href="http://cross-consultants.com/">Cross Consultants</a> is a security firm.</p>
                 <p><a href="http://thecalgarycollection.ca/">The Calgary Collection</a> is a collection of folk music.</p>
-                <p><a href="http://cross-consultants.com/">Cross Consultants</a> is a security firm.</p>
+                <p><a href="http://cross-consuladsaasdtants.com/">Nothinglink</a> is a dickface firm.</p>
             </div>
         </div>
         <div class="section">
@@ -89,7 +93,6 @@
             <h2>Web Development Experience</h2>
             <div class="scontent">
                 <ul>
-                    <li>Extensive experience working with a variety of web servers to create a variety of web sites. Work ranging from extremely simple (http://cross-consultants.com/) to average complexity (http://thecalgarycollection.ca/) to projects of high complexity (http://edgemontgeek.com/whiteboard/)</li>
                     <li>Extensive experience with dealing directly with clients to provide exactly what the client wants</li>
                     <li>Proficient with modern web technologies, including HTML5, CSS3, JavaScript, AJAX, jQuery, Bootstrap, Wordpress</li>
                     <li>Proficient with many back-end technologies, including </li>
