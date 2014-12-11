@@ -1,4 +1,5 @@
 @royal: #4064aa;
+@purple: #8755b1;
 
 html, body {
 	margin: 0;
@@ -7,10 +8,18 @@ html, body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     background:black;
+    font-size: 14px;
 }
 
 div {
     //outline:1px solid red;
+}
+
+a {
+    color: @royal;
+    &:visited {
+        color: @purple;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -63,31 +72,41 @@ div {
                 }
             }
             &>.scontent {
+                width: 800px;
+                margin: 0 auto;
+                line-height: 1.6;
                 p {
                     margin: 1.2em 0;
                 }
             }
             &>h2 {
+                width: 800px;
+                margin: 0 auto;
                 display: block;
             }
         
             .tile {
                 display: inline-block;
                 vertical-align: top;
-                width: 200px;
-                padding:1em;
+                width: 150px;
                 background:none;
-                img {
-                    margin: 0px auto;
-                }
-            }
-            .tile, a {
                 border: 2px solid white;
                 border-radius: 10px;
                 padding: 0.4em 1em;
+                margin: 5px;
+                img {
+                    width:150px;
+                    margin: 0px auto;
+                }
+            }
+            a {
+                border: 2px solid white;
+                border-radius: 10px;
+                padding: 0.2em 0.5em;
             }
         }
         #shroud {
+            //display:none;
             position:absolute;
             width:100%;
             height:100%;

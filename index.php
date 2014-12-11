@@ -22,7 +22,7 @@
             $($fh2[0]).fadeIn(500).delay(2500).fadeOut(400);
             $($fh2[1]).delay(3500).fadeIn(500).delay(2500).fadeOut(400);
             $($fh2[2]).delay(7000).fadeIn(500);
-            $("#toodark").delay(9).fadeOut(400);
+            $("#toodark").delay(9000).fadeOut(400);
         });
         $(function(){
             $("#btn-power").click(function(){
@@ -37,7 +37,7 @@
                 setTimeout(function() { $("#header").toggleClass("off"); },280);
                 setTimeout(function() { $("#header").toggleClass("off"); },500);
                 setTimeout(function() { $("#header").toggleClass("off"); },800);
-                $("#shroud").delay(17).fadeOut();
+                $("#shroud").delay(1700).fadeOut(2000);
             });
         });
 	</script>
@@ -56,6 +56,14 @@
             </div>
         </div>
         <div class="section">
+            <h2>Other Sample Work</h2>
+            <div class="scontent">
+                <p><a href="http://cross-consultants.com/">Cross Consultants</a> is a security firm.</p>
+                <p><a href="http://thecalgarycollection.ca/">The Calgary Collection</a> is a collection of folk music.</p>
+                <p><a href="http://cross-consultants.com/">Cross Consultants</a> is a security firm.</p>
+            </div>
+        </div>
+        <div class="section">
             <h2>Education</h2>
             <div class="scontent">
                 <div class="tile">
@@ -71,16 +79,9 @@
                     Microsoft Certified Professional (MCP), Microsoft Certified Systems Administrator (MCSA)
                 </div>
                 <div class="tile">
+                    <img src="img/edu-GATE.png" />
                     Graduate of “Gifted And Talented Education” (GATE) program, with an IQ of 140 (top 1% by intelligence)
                 </div>
-            </div>
-        </div>
-        <div class="section">
-            <h2>Sample Work</h2>
-            <div class="scontent">
-                <p>The <a href="http://edgemontgeek.com/whiteboard/">Whiteboard App</a> is my tech demo.</p>
-                <p><a href="http://cross-consultants.com/">Cross Consultants</a> is a security firm.</p>
-                <p><a href="http://thecalgarycollection.ca/">The Calgary Collection</a> is a collection of folk music.</p>
             </div>
         </div>
         <div class="section">
