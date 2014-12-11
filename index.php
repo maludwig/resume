@@ -47,10 +47,11 @@
     <div id="header" class="off">
         <div id="btn-power"></div>
         <div id="neon"></div>
+        <h3>403-479-3269 &nbsp;&nbsp;&nbsp; <a href="mailto:mitchell.ludwig@gmail.com">mitchell.ludwig@gmail.com</a></h3>
     </div>
     <div id="content">
         <div class="section">
-            <h2>Tech Demo</h2>
+            <h2>Tecsh Demo</h2>
             <div class="scontent">
                 The <a href="http://edgemontgeek.com/whiteboard/">Whiteboard App</a> is a web app I designed and implemented to showcase my web development skills. It allows for people to share a whiteboard in the cloud, and visually communicate ideas over any distance.
             </div>

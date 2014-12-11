@@ -1,5 +1,7 @@
 @royal: #4064aa;
 @purple: #8755b1;
+@toodarktext: #4f5a6d;
+@offtext: #3b3e45;
 
 html, body {
 	margin: 0;
@@ -48,10 +50,28 @@ a {
             margin: 0 auto;
             background: url('../img/neon-sprite.png') 0 -300px;
         }
+        h3, a {
+            color: white;
+        }
+        h3 {
+            width: 500px;
+            margin: 1em auto;
+            color: white;
+            border: 2px solid @royal;
+            border-radius: 10px;
+            text-align: center;
+        }
         &.off {
             background: black; 
             #neon {
                 background: url('../img/neon-sprite.png') 0 0;
+            }
+            a {
+                color: @offtext;
+            }
+            h3 {
+                color: @offtext;
+                border-color: @offtext;
             }
         }
     }
@@ -125,7 +145,7 @@ a {
         background: black;
         h2 {
             position:absolute;
-            color:#504a32;
+            color:@toodarktext;
             display:none;
         }
     }
