@@ -53,7 +53,7 @@
 <body>
     <div id="container">
         <div id="header" class="off">
-            <h1>MITCHELL LUDWIG</h1>
+            <h1>Mitchell Ludwig</h1>
             <h3>403-479-3269 &nbsp;&nbsp;&nbsp; <a href="mailto:mitchell.ludwig@gmail.com">mitchell.ludwig@gmail.com</a></h3>
         </div>
         <div id="content">
