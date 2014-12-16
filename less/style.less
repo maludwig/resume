@@ -2,6 +2,8 @@
 @purple: #9243D3;
 @toodarktext: #4f5a6d;
 @offtext: #3b3e45;
+@pdfcolor: #aa2727;
+@doccolor: #4377b4;
 
 html, body {
 	margin: 0;
@@ -10,7 +12,6 @@ html, body {
     min-height: 100%;
     font-family: 'Open Sans', sans-serif;
     background:linear-gradient(to bottom, rgba(5,23,51,1) 0%,rgba(30,93,112,1) 56%,rgba(45,142,139,1) 90%,rgba(168,224,193,1) 97%,rgba(196, 232, 212, 1) 100%);
-    
     font-size: 14px;
     color: white;
 }
@@ -56,14 +57,33 @@ a {
             border: 1px solid rgba(0,0,0,0.5);
             border-radius: 5px;
             a {
-                border: 1px solid rgba(255,255,255,0.3);
                 border: 1px solid fadeout(@royal, 20%);
                 border-radius: 3px;
-                background: rgba(255,255,255,0.1);
                 background: rgba(0,0,0,0.2);
                 padding: 3px 5px;
                 &:visited {
                     border: 1px solid fadeout(@purple, 20%);
+                }
+                &.pdf {
+                    color: @pdfcolor;
+                    border-color: fadeout(@pdfcolor, 20%);
+                    background: linear-gradient(to bottom, fadeout(@pdfcolor, 80%), rgba(0,0,0,0.2));
+                    margin-right: 3em;
+                    &:hover {
+                        background: linear-gradient(to bottom, fadeout(@pdfcolor, 60%), rgba(0,0,0,0.2));
+                    }
+                }
+                &.doc {
+                    color: @doccolor;
+                    border-color: fadeout(@doccolor, 20%);
+                    background: linear-gradient(to bottom, fadeout(@doccolor, 80%), rgba(0,0,0,0.2));
+                    &:hover {
+                        background: linear-gradient(to bottom, fadeout(@doccolor, 60%), rgba(0,0,0,0.2));
+                    }
+                }
+                &.file {
+                    font-size: 1.4em;
+                    padding: 1em 5.7em;
                 }
             }
         }
