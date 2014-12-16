@@ -11,49 +11,20 @@
 	<link rel="stylesheet/less" type="text/css" href="less/style.less" />
 	<script src="js/less-2.0.0.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'><!-- A pretty font -->
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><!-- Icon font -->
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/jquery-center.1.2.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'><!-- Exotic header font -->
+	<script src="js/jquery-1.11.1.min.js"></script><!-- If you don't know what jQuery is, why are you looking at my code? -->
+	<script src="js/jquery-center.1.2.js"></script><!-- Homebrew jQuery for centering objects in the DOM -->
 	
     <script>
         $(window).load(function(){
-            $fh2 = $("#toodark>h2");
-            $fh2.center().hide();
-            $($fh2[0]).fadeIn(500).delay(2500).fadeOut(400);
-            $($fh2[1]).delay(3500).fadeIn(500).delay(2500).fadeOut(400);
-            $($fh2[2]).delay(7000).fadeIn(500);
-            $("#toodark").delay(9000).fadeOut(400);
-            setTimeout(function(){ window.scrollTo(0,0); },8500);
-            setTimeout(function(){ window.scrollTo(0,0); },9000);
-            $("#toodark").click(function() {
-                $(this).hide();
-            });
-            $(".tile div img").center();
-        });
-        
-        $(function(){
-            $("#btn-power").click(function(){
-                //$("#neon").toggleClass("off").delay(200).toggleClass("off").delay(200).toggleClass("off").delay(400);
-                $(this).fadeOut();
-                $("#header").toggleClass("off");
-                setTimeout(function() { $("#header").toggleClass("off"); },100);
-                setTimeout(function() { $("#header").toggleClass("off"); },200);
-                setTimeout(function() { $("#header").toggleClass("off"); },240);
-                setTimeout(function() { $("#header").toggleClass("off"); },250);
-                setTimeout(function() { $("#header").toggleClass("off"); },265);
-                setTimeout(function() { $("#header").toggleClass("off"); },280);
-                setTimeout(function() { $("#header").toggleClass("off"); },500);
-                setTimeout(function() { $("#header").toggleClass("off"); },800);
-                $("#shroud").delay(1700).fadeOut(2000);
-            });
-            window.scrollTo(0,0);
+            $(".tile div img").center(); //Center the education images. Must be done after page load, unless image widths/heights are prespecified.
         });
 	</script>
 </head>
 
 <body>
     <div id="container">
-        <div id="header" class="off">
+        <div id="header">
             <h1>Mitchell Ludwig</h1>
             <h3><a href="tel:4034793269">403-479-3269</a> &nbsp;&nbsp;&nbsp; <a href="mailto:mitchell.ludwig@gmail.com">mitchell.ludwig@gmail.com</a></h3>
         </div>
@@ -145,7 +116,6 @@
                 </div>
             </div>
             &copy; 2014 - Mitchell Ludwig
-            <div id="shroud"></div>
         </div>
     </div>
 </body>
