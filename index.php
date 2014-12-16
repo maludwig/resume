@@ -61,10 +61,8 @@
             <div class="section">
                 <h2>Other Versions</h2>
                 <div class="scontent">
-                    <a class="pdf file" href="files/MitchellLudwig.pdf">PDF Version</a>
-                    <a class="doc file" href="files/MitchellLudwig.doc">DOC Version</a>
-                    <br />
-                    <br />
+                    <div class="file"><a class="pdf" href="files/MitchellLudwig.pdf">PDF Version</a></div>
+                    <div class="file"><a class="doc" href="files/MitchellLudwig.doc">DOC Version</a></div>
                 </div>
             </div>
             <div class="section">
@@ -97,8 +95,8 @@
                         <p>Microsoft Certified Professional (MCP), Microsoft Certified Systems Administrator (MCSA)</p>
                     </div>
                     <div class="tile">
-                        <div><img src="img/edu-W3Schools-css.png" /></div>
-                        <p>CSS3 Certified by W3Schools</p>
+                        <div><img src="img/edu-W3Schools-sofar.png" /></div>
+                        <p>CSS3 and Javascript Certified by W3Schools</p>
                     </div>
                 </div>
             </div>
