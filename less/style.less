@@ -1,5 +1,5 @@
-@royal: #4064aa;
-@purple: #8755b1;
+@royal: #6E9FFF;
+@purple: #9243D3;
 @toodarktext: #4f5a6d;
 @offtext: #3b3e45;
 
@@ -9,7 +9,8 @@ html, body {
     width: 100%;
     min-height: 100%;
     font-family: 'Open Sans', sans-serif;
-    background:linear-gradient(to bottom, rgba(5,23,51,1) 0%,rgba(30,93,112,1) 56%,rgba(45,142,139,1) 90%,rgba(168,224,193,1) 97%,rgba(255,255,255,1) 100%);
+    background:linear-gradient(to bottom, rgba(5,23,51,1) 0%,rgba(30,93,112,1) 56%,rgba(45,142,139,1) 90%,rgba(168,224,193,1) 97%,rgba(196, 232, 212, 1) 100%);
+    
     font-size: 14px;
     color: white;
 }
@@ -51,29 +52,54 @@ a {
         .section {
             padding: 0 1em 1em;
             margin: 1em 0;
-            background: rgba(255,255,255,0.09);
             background: rgba(0,0,0,0.06);
             border: 1px solid rgba(0,0,0,0.5);
             border-radius: 5px;
             a {
                 border: 1px solid rgba(255,255,255,0.3);
+                border: 1px solid fadeout(@royal, 20%);
                 border-radius: 3px;
                 background: rgba(255,255,255,0.1);
+                background: rgba(0,0,0,0.2);
                 padding: 3px 5px;
+                &:visited {
+                    border: 1px solid fadeout(@purple, 20%);
+                }
             }
         }
         .tile {
             width: 150px;
             background: white;
-            color: @royal;
+            background: linear-gradient(to bottom, white 50%, rgba(255,255,255,0.5));
+            color:black;
             display:inline-block;
             vertical-align: top;
-            border: 1px solid rgba(0,0,0,0.5);
             border-radius: 10px;
             padding: 0.5em;
             margin: 5px;
             img {
                 width: 150px;
+                vertical-align: middle;
+            }
+            div {
+                position: relative;
+                height: 200px;
+            }
+            p {
+                height: 150px;
+            }
+        }
+        .job {
+            padding: 0 1em 1em;
+            margin: 1em 0;
+            background: rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.5);
+            border-radius: 5px;
+            h5 {
+                font-size: 1em;
+            }
+            h3, h4, h5 {
+                margin: 0.5em 0 0;
             }
         }
     }
