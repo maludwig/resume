@@ -100,10 +100,6 @@
                         <div><img src="img/edu-W3Schools-css.png" /></div>
                         <p>CSS3 Certified by W3Schools</p>
                     </div>
-                    <div class="tile">
-                        <div><img src="img/edu-GATE.png" /></div>
-                        <p>Graduate of “Gifted And Talented Education” (GATE) program, with an IQ in the top 1% by intelligence</p>
-                    </div>
                 </div>
             </div>
             <div class="section">
