@@ -7,8 +7,9 @@
 	<title>Resume - Mitchell Ludwig</title>
     <!-- Hi! So you've decided to take a peek at the code. Awesome! I've kept everything purposefully unminified, so that you can look at the code, and easily understand the structure. -->
     <script src="js/ie-redirect.js"></script><!-- redirect IE9 and under to the sympathy page -->
-    <!-- I'm using Less as my CSS compiler, because it has a rich feature set of awesome shorthand that really helps with speeding up development. On a normal web page, these would be precompiled server-side. I've left them here for your viewing pleasure. -->
-	<link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <!-- I'm using Less as my CSS compiler, because it has a rich feature set of awesome shorthand that really helps with speeding up development. On a normal web page, these would be precompiled server-side. I've left the less link here for your viewing pleasure. -->
+	<!-- <link rel="stylesheet/less" type="text/css" href="less/style.less" /> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<script src="js/less-2.0.0.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'><!-- A pretty font -->
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'><!-- Exotic header font -->
@@ -24,33 +25,33 @@
 
 <body>
     <div id="container">
-        <div id="header">
+        <header>
             <h1>Mitchell Ludwig</h1>
             <h3><a href="tel:4034793269">403-479-3269</a> &nbsp;&nbsp;&nbsp; <a href="mailto:mitchell.ludwig@gmail.com">mitchell.ludwig@gmail.com</a></h3>
-        </div>
+        </header>
         <div id="content">
-            <div class="section">
+            <section>
                 <h2>Other Versions</h2>
                 <div class="scontent">
                     <div class="file"><a class="pdf" href="files/MitchellLudwig.pdf">PDF Version</a></div>
                     <div class="file"><a class="doc" href="files/MitchellLudwig.doc">DOC Version</a></div>
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            <section>
                 <h2>Tech Demo</h2>
                 <div class="scontent">
                     The <a href="http://edgemontgeek.com/whiteboard/">Whiteboard App</a> is a web app I designed and implemented to showcase my web development skills. It allows for people to share a whiteboard in the cloud, and visually communicate ideas over any distance. Built on LAMP (Linux [CentOS], Apache, MySQL, PHP) in the Amazon EC2 cloud.
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            <section>
                 <h2>Other Sample Work</h2>
                 <div class="scontent">
                     <p><a href="http://cross-consultants.com/">Cross Consultants</a> is a security firm. Cloud hosted, built on PHP. While an extremely simple site, it does feature a quiz in the Learn section, that generates a certificate.</p>
                     <p><a href="http://thecalgarycollection.ca/">The Calgary Collection</a> is a folk music collection, curated by the amazing Gillian M<sup>c</sup>Kercher. Cloud hosted (Amazon EC2), built on LAMP, powered by Wordpress. Scalable architecture was leveraged to handle large volumes during peak times. </p>
                     <p><a href="https://github.com/maludwig">Latest GitHub account</a> | <a href="https://github.com/turiyag">First GitHub account</a></p>
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            <section>
                 <h2>Education</h2>
                 <div class="scontent">
                     <div class="tile">
@@ -70,8 +71,8 @@
                         <p>CSS3 and Javascript Certified by W3Schools</p>
                     </div>
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            <section>
                 <h2>Web Development Experience</h2>
                 <div class="scontent">
                     <ul>
@@ -98,8 +99,8 @@
                         </ul>
                     </ul>
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            <section>
                 <h2>Web Administration Experience</h2>
                 <div class="scontent">
                     <ul>
@@ -108,13 +109,13 @@
                         <li>Primary experience is with cloud-based (Amazon EC2) virtualized Linux (CentOS) servers</li>
                     </ul>
                 </div>
-            </div>
-            <div class="section">
+            </section>
+            <section>
                 <h2>Work History</h2>
                 <div class="scontent">
                     <?php include("./workexperience.php"); ?>
                 </div>
-            </div>
+            </section>
             &copy; 2014 - Mitchell Ludwig
         </div>
     </div>
