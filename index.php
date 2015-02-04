@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Resume - Mitchell Ludwig</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Resume - Mitchell Ludwig</title>
     <!-- Hi! So you've decided to take a peek at the code. Awesome! I've kept everything purposefully unminified, so that you can look at the code, and easily understand the structure. -->
     <!-- If you're familiar with GitHub, you can take a closer look at the code by checking out the repo: https://github.com/maludwig/resume -->
     <script src="js/ie-redirect.js"></script><!-- redirect IE9 and under to the sympathy page -->
     <!-- I'm using Less as my CSS compiler, because it has a rich feature set of awesome shorthand that really helps with speeding up development. On a normal web page, these would be precompiled server-side. I've left the less link here for your viewing pleasure. -->
-	<!-- <link rel="stylesheet/less" type="text/css" href="less/style.less" />
-	<script src="js/less-2.0.0.min.js"></script> -->
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/style.less" />
+    <script src="js/less-2.0.0.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'><!-- A pretty font -->
     <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'><!-- Exotic header font -->
-	<script src="js/jquery-1.11.1.min.js"></script><!-- If you don't know what jQuery is, why are you looking at my code? -->
-	<script src="js/jquery-center.1.2.js"></script><!-- Homebrew jQuery for centering objects in the DOM -->
-	
+    <script src="js/jquery-1.11.1.min.js"></script><!-- If you don't know what jQuery is, why are you looking at my code? -->
+    <script src="js/jquery-center.1.2.js"></script><!-- Homebrew jQuery for centering objects in the DOM -->
+
     <script>
         $(window).load(function(){
             $(".tile div img").center(); //Center the education images. Must be done after page load, unless image widths/heights are prespecified.
         });
-	</script>
+    </script>
 </head>
 
 <body>
