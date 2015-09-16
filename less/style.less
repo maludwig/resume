@@ -5,132 +5,164 @@
 @pdfcolor: #aa2727;
 @doccolor: #4377b4;
 @red: hsl(0, 100%, 50%);
-
-html, body {
+html,
+body {
 	margin: 0;
 	padding: 0;
-    width: 100%;
-    min-height: 100%;
-    font-family: 'Open Sans', sans-serif;
-    background: #051733;
-    background:linear-gradient(to bottom, rgba(5,23,51,1) 0%,rgba(30,93,112,1) 56%,rgba(45,142,139,1) 90%,rgba(168,224,193,1) 97%,rgba(196, 232, 212, 1) 100%);
-    font-size: 14px;
-    color: white;
+	width: 100%;
+	min-height: 100%;
+	font-family: 'Open Sans', sans-serif;
+	//background: #051733;
+	//background: linear-gradient(to bottom, rgba(5, 23, 51, 1) 0%, rgba(30, 93, 112, 1) 56%, rgba(45, 142, 139, 1) 90%, rgba(168, 224, 193, 1) 97%, rgba(196, 232, 212, 1) 100%);
+	font-size: 14px;
+	color: white;
 }
 
 a {
-    color: @royal;
-    text-decoration: none;
-    &:visited {
-        color: @purple;
-    }
+	color: @royal;
+	text-decoration: none;
+	&:visited {
+		color: @purple;
+	}
 }
 
 #container {
-    background: url("../img/stars.png");
+	//background: url("../img/stars.png");
 }
 
-header, #content {
-    padding: 1em;
+header,
+#content {
+	padding: 1em;
+	min-height: 200px;
 }
 
-@media screen and (min-width: 800px) {
-    header, #content {
-        width: 800px;
-        margin: 1em auto;
-    }
+@media screen and (max-width: 450px) {
+	header,
+	#content {
+		.tile {
+			width: auto;
+			padding: 1em;
+			margin: 1em;
+		}
+	}
 }
-    
+
+@media screen and (min-width: 450px) and (max-width: 850px) {
+	header,
+	#content {
+		.tile {
+			width: 44%;
+			padding: 1.3%;
+			margin: 1%;
+		}
+	}
+}
+
+@media screen and (min-width: 850px) {
+	header,
+	#content {
+		width: 800px;
+		margin: 0 auto;
+		.tile {
+			width: 21%;
+			padding: 1.3%;
+			margin: 0.5%;
+		}
+	}
+}
+
 header {
-    text-align: center;
-    a {
-        color: white;
-    }
-    h1 {
-        font-size: 68px;
-        font-family: Lobster;
-    }
+	text-align: center;
+	a {
+		color: white;
+	}
+	h1 {
+		font-size: 68px;
+		font-family: Lobster;
+	}
 }
 
 #content {
-    padding-bottom: 20em;
-    line-height: 1.8;
-    section {
-        padding: 0 1em 1em;
-        margin: 1em 0;
-        background: rgba(0,0,0,0.06);
-        border: 1px solid rgba(0,0,0,0.5);
-        border-radius: 5px;
-        a {
-            border: 1px solid fadeout(@royal, 20%);
-            border-radius: 3px;
-            background: rgba(0,0,0,0.2);
-            padding: 3px 5px;
-            &:visited {
-                border: 1px solid fadeout(@purple, 20%);
-            }
-        }
-        .file {
-            font-size: 1.4em;
-            margin: 1em 0 0;
-            a {
-                display:block;
-                width: 100%;
-                text-align: center;
-                padding: 0.4em 0;
-                &.pdf {
-                    color: @pdfcolor;
-                    border-color: fadeout(@pdfcolor, 20%);
-                    background: linear-gradient(to bottom, fadeout(@pdfcolor, 80%), rgba(0,0,0,0.2));
-                    margin-right: 3em;
-                    &:hover {
-                        background: linear-gradient(to bottom, fadeout(@pdfcolor, 60%), rgba(0,0,0,0.2));
-                    }
-                }
-                &.doc {
-                    color: @doccolor;
-                    border-color: fadeout(@doccolor, 20%);
-                    background: linear-gradient(to bottom, fadeout(@doccolor, 80%), rgba(0,0,0,0.2));
-                    &:hover {
-                        background: linear-gradient(to bottom, fadeout(@doccolor, 60%), rgba(0,0,0,0.2));
-                    }
-                }
-            }
-        }
-    }
-    .tile {
-        width: 150px;
-        background: white;
-        background: linear-gradient(to bottom, white 60%, rgba(255,255,255,0.3));
-        color:black;
-        display:inline-block;
-        vertical-align: top;
-        border-radius: 10px;
-        padding: 0.5em;
-        margin: 5px;
-        img {
-            width: 150px;
-            vertical-align: middle;
-        }
-        div {
-            position: relative;
-            height: 200px;
-        }
-        p {
-            height: 150px;
-        }
-    }
-    .job {
-        padding: 0 1em 1em;
-        margin: 1em 0;
-        background: rgba(0,0,0,0.06);
-        border: 1px solid rgba(0,0,0,0.5);
-        border-radius: 5px;
-        h5 {
-            font-size: 1em;
-        }
-        h3, h4, h5 {
-            margin: 0.5em 0 0;
-        }
-    }
+	padding-bottom: 20em;
+	line-height: 1.8;
+	section {
+		padding: 0 1em 1em;
+		margin: 7em 0;
+		background: rgba(0, 0, 0, 0.8);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 8px;
+		a {
+			display: inline-block;
+			border: 2px solid fadeout(@royal, 20%);
+			border-radius: 3px;
+			background: rgba(36, 32, 41, 0.2);
+			padding: 3px 5px;
+			margin: 0.3em;
+			&:visited {
+				border: 1px solid fadeout(@purple, 20%);
+			}
+		}
+		.file {
+			font-size: 1.4em;
+			margin: 1em 0 0;
+			a {
+				margin: 0;
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 0.4em 0;
+				&.pdf {
+					color: @pdfcolor;
+					border-color: fadeout(@pdfcolor, 20%);
+					background: linear-gradient(to bottom, fadeout(@pdfcolor, 80%), rgba(0, 0, 0, 0.2));
+					margin-right: 3em;
+					&:hover {
+						background: linear-gradient(to bottom, fadeout(@pdfcolor, 60%), rgba(0, 0, 0, 0.2));
+					}
+				}
+				&.doc {
+					color: @doccolor;
+					border-color: fadeout(@doccolor, 20%);
+					background: linear-gradient(to bottom, fadeout(@doccolor, 80%), rgba(0, 0, 0, 0.2));
+					&:hover {
+						background: linear-gradient(to bottom, fadeout(@doccolor, 60%), rgba(0, 0, 0, 0.2));
+					}
+				}
+			}
+		}
+	}
+	.tile {
+		background: white;
+		background: linear-gradient(to bottom, white 60%, rgba(255, 255, 255, 0.3));
+		color: black;
+		display: inline-block;
+		vertical-align: top;
+		border-radius: 10px;
+		img {
+			width: 150px;
+			vertical-align: middle;
+		}
+		div {
+			position: relative;
+			height: 200px;
+		}
+		p {
+			height: 150px;
+		}
+	}
+	.job {
+		padding: 0 1em 1em;
+		margin: 1em 0;
+		background: rgba(0, 0, 0, 0.06);
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		border-radius: 5px;
+		h5 {
+			font-size: 1em;
+		}
+		h3,
+		h4,
+		h5 {
+			margin: 0.5em 0 0;
+		}
+	}
 }
