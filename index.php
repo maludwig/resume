@@ -23,9 +23,8 @@
 	<script src="js/jquery-1.11.1.min.js"></script>
 	<!-- If you don't know what jQuery is, why are you looking at my code? -->
 	<script src="js/jquery-center.1.2.js"></script>
-	<!-- Homebrew jQuery for centering objects in the DOM -->
+	<!-- Parallax scrolling -->
 	<script src="js/parallax.min.js"></script>
-	<!-- Homebrew jQuery for centering objects in the DOM -->
 
 	<script>
 		$(window).load(function () {
