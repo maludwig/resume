@@ -62,11 +62,8 @@
 				<div class="scontent">
 					The <a href="http://edgemontgeek.com/whiteboard/">Whiteboard App</a> is a web app I designed and implemented to showcase my web development skills. It allows for people to share a whiteboard in the cloud, and visually communicate ideas over any distance. Built on LAMP (Linux [CentOS], Apache, MySQL, PHP) in the Amazon EC2 cloud.
 				</div>
-			</section>
-			<section>
 				<h2>Other Sample Work</h2>
 				<div class="scontent">
-					<p><a href="http://cross-consultants.com/">Cross Consultants</a> is a security firm. Cloud hosted, built on PHP. While an extremely simple site, it does feature a quiz in the Learn section, that generates a certificate.</p>
 					<p><a href="http://thecalgarycollection.ca/">The Calgary Collection</a> is a folk music collection, curated by the amazing Gillian M<sup>c</sup>Kercher. Cloud hosted (Amazon EC2), built on LAMP, powered by Wordpress. Scalable architecture was leveraged to handle large volumes during peak times. </p>
 					<p><a href="https://github.com/maludwig">Latest GitHub account</a> | <a href="https://github.com/turiyag">First GitHub account</a></p>
 				</div>
@@ -89,6 +86,10 @@
 					<div class="tile">
 						<div><img src="img/edu-W3Schools-sofar.png" /></div>
 						<p>CSS3 and Javascript Certified by W3Schools</p>
+					</div>
+					<div class="tile">
+						<div><img src="img/edu-AWS-CSA-A.png" /></div>
+						<p>AWS Certified Solutions Architect - Associate</p>
 					</div>
 				</div>
 			</section>
