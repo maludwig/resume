@@ -53,8 +53,7 @@
 			<section>
 				<h2>Other Versions</h2>
 				<div class="scontent">
-					<div class="file"><a class="pdf" href="files/MitchellLudwig.pdf">PDF Version</a></div>
-					<div class="file"><a class="doc" href="files/MitchellLudwig.doc">DOC Version</a></div>
+					<div class="file"><a class="pdf" href="files/mitchell_ludwig.pdf">PDF Version</a></div>
 				</div>
 			</section>
 			<section>

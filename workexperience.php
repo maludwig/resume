@@ -1,6 +1,20 @@
 <article class="job">
+	<h3>Solium Financial</h3>
+	<h4>January 2018 - Present</h4>
+	<h5>Technical Migrations Specialist</h5>
+	<ul>
+		<li>Brought on for time-sensitive interdisciplinary work, to move large amounts of financial records into the system</li>
+		<li>Worked with git, python, Pentaho, Docker, CentOS/RHEL, Java, Oracle SQL, SQLite, to lead development of a data migration system</li>
+		<li>Senior technical person with wide authority to implement the project as I saw fit</li>
+		<li>Used Ansible for deployments</li>
+		<li>Used BitBucket/Jenkins for CI</li>
+		<li>Also responsible for fixing random glitches in the primary system in the dead of the night</li>
+	</ul>
+</article>
+
+<article class="job">
 	<h3>Edgemont Computer Geek (Personal Company)</h3>
-	<h4>November 2006 – Present Day</h4>
+	<h4>November 2006 - January 2018</h4>
 	<h5>Web Administrator / Web Developer</h5>
 	<ul>
 		<li>Designed, installed, and maintained multiple Windows Server and cloud-based virtualized Linux servers (Amazon EC2) for high reliability</li>
@@ -13,11 +27,12 @@
 
 <article class="job">
 	<h3>SPLICE Software</h3>
-	<h4>May 2015 - Present Day</h4>
+	<h4>May 2015 - January 2018</h4>
 	<h5>Cloud Infrastructure Administrator / Web Developer</h5>
 	<ul>
 		<li>Maintained and architected a fleet of ~30 Linux servers in multiple private and public clouds, primarily in Amazon Web Services</li>
-		<li>Implemented cloud monitoring software in Apache/Django with django-rest-framework, ansible, and </li>
+		<li>Implemented various web-based tools with Django, React, and React-Native for mobile</li>
+		<li>Implemented cloud monitoring software in Apache/Django with django-rest-framework, ansible, and PagerDuty</li>
 		<li>Maintained backups</li>
 		<li>Frequently required looking over server logs, monitoring and optimizing system performance, and managing user accounts and permissions</li>
 		<li>On-call to troubleshoot issues as they arose</li>

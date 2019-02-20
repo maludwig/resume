@@ -26,14 +26,11 @@
 		</p>
 		<p><a class="btn btn-lg btn-success" href="http://edgemontgeek.com/whiteboard" role="button">Whiteboard App</a></p>
 		<p>
-			You may also access my resume in PDF or Microsoft Word formats. If you're having trouble opening these files you need to get Adobe Rea- actually...if you can't open either a PDF or a DOC...then I don't want to work for your company. Seriously, what is this, the stone age? I wish you the best of luck finding another candidate.
+			You may also access my resume in PDF format. If you're having trouble opening these files you need to get Adobe Rea- actually...if you can't open a PDF...then I don't want to work for your company. Seriously, what is this, the stone age? I wish you the best of luck finding another candidate.
 		</p>
 		<p>
-			<a class="btn btn-lg btn-danger" href="../files/MitchellLudwig.pdf" role="button">
+			<a class="btn btn-lg btn-danger" href="../files/mitchell_ludwig.pdf" role="button">
 				<img src="../img/pdf.png" /> PDF Version
-			</a>
-			<a class="btn btn-lg btn-primary" href="../files/MitchellLudwig.doc" role="button">
-				<img src="../img/winword.png" /> MS Word Version
 			</a>
 		</p>
 	</div>
