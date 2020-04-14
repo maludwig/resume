@@ -1,14 +1,19 @@
 <article class="job">
-	<h3>Solium Financial</h3>
-	<h4>January 2018 - Present</h4>
-	<h5>Technical Migrations Specialist</h5>
+	<h3>Shareworks - Morgan Stanley</h3>
+	<h4>January 2018 - April 2020</h4>
+	<h5>Data Analytics Developer</h5>
 	<ul>
 		<li>Brought on for time-sensitive interdisciplinary work, to move large amounts of financial records into the system</li>
 		<li>Worked with git, python, Pentaho, Docker, CentOS/RHEL, Java, Oracle SQL, SQLite, to lead development of a data migration system</li>
+		<li>Worked with Dataiku web based data science platform to build out Data Warehouse</li>
+		<li>Extensive work developing Python-based analytics with jupyter notebooks, numpy, pandas, and matplotlib</li>
+		<li>Extensive work in Java to develop APIs to get data from the system with extremely high performance</li>
+		<li>Extensive work in SQL to query large datasets</li>
+		<li>Communicated data and visualizationgs with high level management</li>
 		<li>Senior technical person with wide authority to implement the project as I saw fit</li>
 		<li>Used Ansible for deployments</li>
-		<li>Used BitBucket/Jenkins for CI</li>
-		<li>Also responsible for fixing random glitches in the primary system in the dead of the night</li>
+		<li>Used BitBucket/Jenkins/Docker for CI</li>
+		<li>Also responsible for fixing random glitches in the primary system in the dead of the night (pager duty)</li>
 	</ul>
 </article>
 
@@ -55,15 +60,7 @@
 	<h3>Talisman Energy – Through TEKSystems </h3>
 	<h4>June 2011 – September 2012</h4>
 	<h5>Desktop Support Technician, Level IV</h5>
-	<ul>
-		<li>Designed, implemented web based asset tracking system, which integrated automated queries to find lost equipment </li>
-		<li>Designed, implemented a web based network monitoring suite </li>
-		<li>Designed, implemented an online store to track equipment </li>
-		<li>Was the final escalation point in my team of 40 people, if nobody else could figure it out, it came to me </li>
-		<li>Performed networking tasks with a system of over 130 switches with 2000 users </li>
-	</ul>
 </article>
-
 <article class="job">
 	<h3>IBM, Superstore, Futureshop, Best Buy, Walmart, The Bay, RBC Royal Bank, and TD Bank – Through Kelly Services </h3>
 	<h4>February 2010 – September 2010 </h4>

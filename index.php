@@ -16,12 +16,13 @@
 	<script src="js/less-2.0.0.min.js"></script>
 	-->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,300' rel='stylesheet' type='text/css'>
 	<!-- A pretty font -->
-	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	<!-- Exotic header font -->
-	<script src="js/jquery-1.11.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 	<!-- If you don't know what jQuery is, why are you looking at my code? -->
+	<script src="js/jquery-1.11.1.min.js"></script>
 	<script src="js/jquery-center.1.2.js"></script>
 	<!-- Parallax scrolling -->
 	<script src="js/parallax.min.js"></script>
@@ -35,9 +36,9 @@
 		});
 		$(function () {
 			$(".parallax-window").parallax({
-				imageSrc: "img/bg2.jpg",
-				naturalWidth: 1280,
-				naturalHeight: 2500,
+				imageSrc: "img/bg3.png",
+				naturalWidth: 2160,
+				naturalHeight: 3840,
 			});
 		});
 	</script>
@@ -47,7 +48,7 @@
 	<div id="container" class="parallax-window">
 		<header>
 			<h1>Mitchell Ludwig</h1>
-			<h3><a href="tel:4034793269">403-479-3269</a> &nbsp;&nbsp;&nbsp; <a href="mailto:mitchell.ludwig@gmail.com">mitchell.ludwig@gmail.com</a></h3>
+			<h3><a href="tel:+14034793269">403-479-3269</a> &nbsp;&nbsp;&nbsp; <a href="mailto:mitchell.ludwig@gmail.com">mitchell.ludwig@gmail.com</a></h3>
 		</header>
 		<div id="content">
 			<section>
@@ -68,7 +69,7 @@
 				</div>
 			</section>
 			<section>
-				<h2>Education</h2>
+				<h2>Education and Certifications</h2>
 				<div class="scontent">
 					<div class="tile">
 						<div><img src="img/edu-UofC.png" /></div>
@@ -93,6 +94,28 @@
 				</div>
 			</section>
 			<section>
+				<h2>Data Science Experience</h2>
+				<div class="scontent">
+					<ul>
+						<li>Extensive experience with:</li>
+						<ul>
+							<li>SQL (Oracle, PostgreSQL, MySQL)</li>
+							<li>Java</li>
+							<li>Python (inc. pandas, NumPy, Matplotlib, Jupyter, Tensorflow, and Keras)</li>
+							<li>API Integration</li>
+							<li>Docker/Kubernetes</li>
+							<li>Amazon Web Services</li>
+						</ul>
+						<li>Proficient with many other technologies, including:</li>
+						<ul>
+							<li>Machine Learning</li>
+							<li>Tableau</li>
+							<li>ETL tools (ex. Pentaho Data Integration)</li>
+						</ul>
+					</ul>
+				</div>
+			</section>
+			<section>
 				<h2>Web Development Experience</h2>
 				<div class="scontent">
 					<ul>
@@ -102,14 +125,16 @@
 							<li>HTML5</li>
 							<li>CSS3</li>
 							<li>JavaScript</li>
+							<li>React/React Native</li>
 							<li>XML</li>
 							<li>AJAX</li>
 							<li>jQuery</li>
 							<li>Bootstrap</li>
-							<li>Context Management System (Wordpress)</li>
+							<li>Content Management Systems (inc. Wordpress)</li>
 						</ul>
 						<li>Proficient with many back-end technologies, including </li>
 						<ul>
+							<li>NodeJS (inc. ExpressJS, Babel, Webpack)</li>
 							<li>LAMP/WAMP: (Linux/Windows, PHP, MySQL, Apache)</li>
 							<li>ISS: ASP.NET (C#), Java</li>
 							<li>SSH/SSL, git, FTP, DNS</li>
@@ -125,8 +150,8 @@
 				<div class="scontent">
 					<ul>
 						<li>Extensive experience as a technician, working at every level, from basic desktop computers to maintaining massive scale server architecture, including virtual environments</li>
-						<li>Extensive experience with Windows Server products</li>
-						<li>Primary experience is with cloud-based (Amazon EC2) virtualized Linux (CentOS) servers</li>
+						<li>Most experience with cloud-based (Amazon EC2) and virtualized Linux (CentOS/RHEL) servers</li>
+						<li>Experience with Windows and Linux server products</li>
 					</ul>
 				</div>
 			</section>
@@ -136,7 +161,7 @@
 					<?php include("./workexperience.php"); ?>
 				</div>
 			</section>
-			&copy; 2015 - Mitchell Ludwig
+			&copy; 2020 - Mitchell Ludwig
 		</div>
 	</div>
 </body>
